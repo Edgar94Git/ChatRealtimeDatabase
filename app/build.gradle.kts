@@ -66,6 +66,9 @@ dependencies {
     //crashlytics
     implementation("com.google.firebase:firebase-crashlytics-ktx")
 
+    //realtime database
+    implementation("com.google.firebase:firebase-database-ktx")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
