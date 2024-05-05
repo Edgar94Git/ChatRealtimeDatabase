@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -58,7 +59,13 @@ dependencies {
 
     //Firebase
     implementation(platform(libs.firebase.bom))
-    implementation("com.google.firebase:firebase-analytics")
+
+    //analytics
+    implementation("com.google.firebase:firebase-analytics-ktx")
+
+    //crashlytics
+    implementation("com.google.firebase:firebase-crashlytics-ktx")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
