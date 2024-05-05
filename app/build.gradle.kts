@@ -21,14 +21,17 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            isDebuggable = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            resValue("string", "app_name", "Chat Realtime Database")
         }
         debug {
             isDebuggable = true
             applicationIdSuffix = ".debug"
+            resValue("string", "app_name", "[DEBUG] Chat Realtime Database")
         }
     }
     compileOptions {
