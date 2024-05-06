@@ -8,4 +8,8 @@ package com.ereyes.chatrealtimedatabase.common
  ****/
 object Constants {
     const val PATH = "Messages"
+    const val SENT_MESSAGE = 0
+    const val RECEIVED_MESSAGE = 1
+    const val DATA_BASE = "User"
+    const val USER_NAME = "User_Name"
 }

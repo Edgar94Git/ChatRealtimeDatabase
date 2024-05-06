@@ -32,7 +32,11 @@ class MainFragment : Fragment() {
 
     private fun setUpOnClickListener() {
         binding.btnChat.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_chatFragment)
+            val userName = binding.tvUserName.text.toString().trim()
+            if(userName.isNotEmpty()){
+                viewModel.saveUserName(userName)
+                findNavController().navigate(R.id.action_mainFragment_to_chatFragment)
+            }
         }
     }
 
