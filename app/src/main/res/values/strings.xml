@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ChatRealtimeDatabase</string>
+    <string name="content_description">Imagae view</string>
+    <string name="welcome_message">Bienvenido a AristiChat</string>
+    <string name="welcome_message_subtitle">El mejor chat del mundo mundial</string>
+    <string name="username_hint">Nombre de usuario</string>
+    <string name="chat">Chat</string>
 </resources>
