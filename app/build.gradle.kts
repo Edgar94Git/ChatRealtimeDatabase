@@ -69,6 +69,9 @@ dependencies {
     //realtime database
     implementation("com.google.firebase:firebase-database-ktx")
 
+    //navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
