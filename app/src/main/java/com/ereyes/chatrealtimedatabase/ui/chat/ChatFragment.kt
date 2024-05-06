@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.ereyes.chatrealtimedatabase.R
 import com.ereyes.chatrealtimedatabase.databinding.FragmentChatBinding
 
@@ -18,5 +19,16 @@ class ChatFragment : Fragment() {
     ): View {
         binding = FragmentChatBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpOnClickListener()
+    }
+
+    private fun setUpOnClickListener() {
+        binding.ivBack.setOnClickListener {
+            findNavController().navigate(R.id.action_chatFragment_to_mainFragment)
+        }
     }
 }

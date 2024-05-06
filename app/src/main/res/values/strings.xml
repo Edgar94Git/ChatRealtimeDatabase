@@ -6,4 +6,5 @@
     <string name="username_hint">Nombre de usuario</string>
     <string name="chat">Chat</string>
     <string name="message_hint">Mensaje</string>
+    <string name="main">Main</string>
 </resources>
