@@ -43,7 +43,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/hour_date_color"
+        android:background="@color/bg_200"
         app:layout_constraintBottom_toTopOf="@id/llMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@
         android:id="@+id/llMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/hour_date_color"
+        android:background="@color/bg_200"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,6 +78,7 @@
             android:background="@drawable/bg_button_sent"
             android:contentDescription="@string/content_description"
             android:padding="16dp"
+            app:tint="@color/message_me_color"
             android:src="@drawable/ic_send" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
