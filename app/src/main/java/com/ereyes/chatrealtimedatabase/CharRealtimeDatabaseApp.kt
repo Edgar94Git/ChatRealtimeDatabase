@@ -1,8 +1,8 @@
 package com.ereyes.chatrealtimedatabase
 
 import android.app.Application
-import com.google.firebase.Firebase
-import com.google.firebase.initialize
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.ktx.initialize
 import dagger.hilt.android.HiltAndroidApp
 
 /****
