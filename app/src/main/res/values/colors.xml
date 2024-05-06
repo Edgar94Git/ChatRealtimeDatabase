@@ -7,4 +7,8 @@
     <color name="message_other_color">#000000</color>
     <color name="button_sent">#25d366</color>
     <color name="bg_200">#EEEEEE</color>
+    <color name="bg_300">#454545</color>
+    <color name="bg_message_me">#dcf8c6</color>
+    <color name="bg_recycler">#ece5dd</color>
+    <color name="hour_message">#606060</color>
 </resources>
