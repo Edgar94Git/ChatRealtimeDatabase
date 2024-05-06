@@ -5,4 +5,5 @@
     <string name="welcome_message_subtitle">El mejor chat del mundo mundial</string>
     <string name="username_hint">Nombre de usuario</string>
     <string name="chat">Chat</string>
+    <string name="message_hint">Mensaje</string>
 </resources>
