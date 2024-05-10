@@ -41,6 +41,7 @@ class ChatFragment : Fragment() {
 
     private fun setUpObserver() {
         viewModel.userName.observe(viewLifecycleOwner) { userName ->
+            binding.tvTitle.text = userName
             chatAdapter.userName = userName
         }
     }
@@ -64,7 +65,9 @@ class ChatFragment : Fragment() {
 
     private fun setUpOnClickListener() {
         binding.ivBack.setOnClickListener {
-            findNavController().navigate(R.id.action_chatFragment_to_mainFragment)
+            viewModel.logout {
+                findNavController().navigate(R.id.action_chatFragment_to_mainFragment)
+            }
         }
         binding.btnSend.setOnClickListener {
             sendMessage()
