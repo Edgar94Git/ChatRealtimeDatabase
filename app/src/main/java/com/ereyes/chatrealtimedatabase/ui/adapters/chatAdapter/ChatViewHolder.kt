@@ -1,5 +1,9 @@
 package com.ereyes.chatrealtimedatabase.ui.adapters.chatAdapter
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.ereyes.chatrealtimedatabase.common.Constants
@@ -33,6 +37,11 @@ class ChatViewHolder(private val binding: ViewBinding): RecyclerView.ViewHolder(
         currentBinding.tvHourMessage.text = messageModel.hour
         currentBinding.tvMessage.text = messageModel.message
         currentBinding.tvUser.text = messageModel.user.userName
+
+        currentBinding.tvMessage.setOnLongClickListener {
+            copyMessage(message = messageModel.message)
+            false
+        }
     }
 
     private fun bindSentMessage(messageModel: MessageModel) {
@@ -40,6 +49,18 @@ class ChatViewHolder(private val binding: ViewBinding): RecyclerView.ViewHolder(
         currentBinding.tvDate.text = messageModel.date
         currentBinding.tvHourMessage.text = messageModel.hour
         currentBinding.tvMessage.text = messageModel.message
+
+        currentBinding.tvMessage.setOnLongClickListener {
+            copyMessage(message = messageModel.message)
+            false
+        }
+    }
+
+    private fun copyMessage(message: String){
+        val clipBoard: ClipboardManager = binding.root.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clipData = ClipData.newPlainText("label", message)
+        clipBoard.setPrimaryClip(clipData)
+        Toast.makeText(binding.root.context, "Copiado!", Toast.LENGTH_LONG).show()
     }
 
 }
